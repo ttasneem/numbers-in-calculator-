@@ -1,4 +1,5 @@
 package pro2;
+  	 
 import javax.script.*;
 
 
@@ -22,24 +23,24 @@ public class Design  extends Application{
 	Button [] arr = new Button[10];
 	TextField text = new TextField();
 	String res="";
-	 static int size=0;   
+	 static int size=0;  
 	@Override
 	public void start(Stage st) throws Exception {
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		//œÂ ÊÕœÊ ⁄‘«‰ ÕÃ„Â Œœ 6 «⁄„œÂ Ê’›Ì‰ 
-	
+		
 	text.setPrefHeight(70);
 	text.setPrefWidth(300);
 	GridPane g = new  GridPane();
 	g.add(text,0,0,6,2);	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
  
 	Button equal = new Button("=");
 	g.add(equal, 4, 5,2,1);
 	equal.setPrefSize(103,40);
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	 
+	  
 	
 	
 	  for(int i =1; i<10 ;i++){
@@ -53,8 +54,8 @@ public class Design  extends Application{
 		    	 for(int j=2;j>=0;j--)
 		    		g.add(arr[k--], j, i);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		   
-	     Button []arr2= new Button[10];
+		    
+	      Button []arr2= new Button[10];
 	      for(int i =0; i<10 ;i++){	
 	    	  arr2[i]= new Button();
 	    	  arr2[i].setPrefSize(50,40);
@@ -67,16 +68,16 @@ public class Design  extends Application{
 		    	 
 		     }
 		     arr2[0].setText("/");
-		     arr2[1].setGraphic(new ImageView("2.png"));        //Â‰« ›Ì ’“—Â 
+		     arr2[1].setGraphic(new ImageView("2.png"));       
 		     arr2[2].setGraphic(new ImageView("3.png"));       
 		     arr2[3].setText("*");
 		     arr2[4].setText("(");
 		     arr2[5].setText(")");
 		     arr2[6].setText("-");
-		     arr2[7].setGraphic(new ImageView(new Image(getClass().getResourceAsStream("1.png"))));       //Â‰« ›Ì ’Ê—Â
-		     arr2[8].setText("Sqrt");           //Â‰« ›Ì ’Ê—Â
+		     arr2[7].setGraphic(new ImageView(new Image(getClass().getResourceAsStream("1.png"))));       
+		     arr2[8].setText("Sqrt");          
 ///////////////////////////////////////////////////////////////////////////////////////////////////		     
-	 
+		    
 		     String [] str = {"0",".", "%" ,"+"};
 		     Button []last_row= new Button[4];
 		    	 for(int i=0;i<4;i++){
@@ -92,14 +93,114 @@ public class Design  extends Application{
 		st.setResizable(false);
 	
 	st.show();
+	/////////////////////////////////////////////////////////////////////////////////
+	arr[1].setOnAction(e->{
+		text.setText(text.getText()+arr[1].getText());
+	});
+	    
+	arr[2].setOnAction(e->{
+		text.setText((text.getText()+arr[2].getText()));
+	});
+	
+    
+	arr[3].setOnAction(e->{
+		text.setText((text.getText()+arr[3].getText()));
+	});
+    
+	arr[4].setOnAction(e->{
+		text.setText((text.getText()+arr[4].getText()));
+	});
+    
+	arr[5].setOnAction(e->{
+		text.setText((text.getText()+arr[5].getText()));
+	});
+    
+	arr[6].setOnAction(e->{
+		text.setText((text.getText()+arr[6].getText()));
+	});
+    
+	arr[7].setOnAction(e->{
+		text.setText((text.getText()+arr[7].getText()));
+	});
+    
+	arr[8].setOnAction(e->{
+		text.setText((text.getText()+arr[8].getText()));
+	});
+    
+	arr[9].setOnAction(e->{
+		text.setText((text.getText()+arr[9].getText()));
+		
+		});
+		
+	 
 
+	  
+	arr2[0].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[0].getText()+" "));
+	
+	});
 
+	arr2[1].setOnAction(e->{
+		String remind= text.getText();
+		
+		      if(Character.isDigit(remind.charAt(remind.length()-1)))
+				text.setText(remind.substring(0, remind.length()-1));
+		      
+		      else
+		    	  text.setText(remind.substring(0, remind.length()-3));  
+	
+	});		
+	arr2[2].setOnAction(e->{
+		text.setText("");
+	
+	});
 
+	arr2[3].setOnAction(e->{
+		text.setText((text.getText()+" "+arr2[3].getText()+" "));
+	
+	});
 
+	arr2[4].setOnAction(e->{
+		text.setText((text.getText()+arr2[4].getText())+" ");
+	
+	});
+
+	arr2[5].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[5].getText()));
+	
+	});
+
+	arr2[6].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[6].getText()+" "));
+	
+	});
+
+	arr2[7].setOnAction(e->{
+		text.setText((text.getText()+" " +"^ 2"));
+	
+	});
+
+	arr2[8].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[8].getText()+" "));
+	
+	});
+
+ 
+	 
 
    }
    
-   
+ 
+
     	 	 
     	 
 }
+	
+	
+	
+
+	
+ 
+		
+	
+
