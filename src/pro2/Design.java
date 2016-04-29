@@ -133,7 +133,57 @@ public class Design  extends Application{
 		});
 		
 	 
-	 
+
+	  
+	arr2[0].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[0].getText()+" "));
+	
+	});
+
+	arr2[1].setOnAction(e->{
+		String remind= text.getText();
+		
+		      if(Character.isDigit(remind.charAt(remind.length()-1)))
+				text.setText(remind.substring(0, remind.length()-1));
+		      
+		      else
+		    	  text.setText(remind.substring(0, remind.length()-3));  
+	
+	});		
+	arr2[2].setOnAction(e->{
+		text.setText("");
+	
+	});
+
+	arr2[3].setOnAction(e->{
+		text.setText((text.getText()+" "+arr2[3].getText()+" "));
+	
+	});
+
+	arr2[4].setOnAction(e->{
+		text.setText((text.getText()+arr2[4].getText())+" ");
+	
+	});
+
+	arr2[5].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[5].getText()));
+	
+	});
+
+	arr2[6].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[6].getText()+" "));
+	
+	});
+
+	arr2[7].setOnAction(e->{
+		text.setText((text.getText()+" " +"^ 2"));
+	
+	});
+
+	arr2[8].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[8].getText()+" "));
+	
+	});
 
  
 	 
